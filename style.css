@@ -71,3 +71,24 @@ input {
   color: red;
   cursor: pointer;
 }
+
+.toDoContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.toDoBox {
+  max-width: 320px;
+  min-width: 300px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 143px;
+  padding: 10px;
+  border: 1px solid black;
+}
