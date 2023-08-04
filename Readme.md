@@ -9,6 +9,7 @@ Here you can find your tasks with my example:
 
 - [task 1](https://github.com/radomir-radionov/ToDoList-modern/tree/task1)
 - [task 2](https://github.com/radomir-radionov/ToDoList-modern/tree/task2)
+- [task 3](https://github.com/radomir-radionov/ToDoList-modern/tree/task3)
 
 ### Pay attention
 
