@@ -1,6 +1,6 @@
 # To Do List
 
-Stack:
+### Stack:
 
 - HTML, CSS, JavaScript
 - Git
