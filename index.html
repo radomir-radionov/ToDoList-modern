@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <button id="btnOpenModel">Add To Do</button>
-
+    <button id="btnOpenModal">Add To Do</button>
     <div class="modalTodoWrapper">
         <form id="modalTodo">
             <header>
@@ -28,6 +27,23 @@
             <button type="submit">submit</button>
         </form>
     </div>
+    <div class="modalEditTodoWrapper">
+        <form id="modalEditTodo">
+            <header>
+                <h2 class="modal-title">Edit To Do</h2>
+                <button id="btnClose">&times;</button>
+            </header>
+            <label for="inputTitle">
+                Title:
+                <input type="text" id="inputEditTitle" placeholder="Enter a new title">
+            </label>
+            <label for="inputDescription">
+                Description:
+                <input type="text" id="inputEditDescription" placeholder="Enter a new description">
+            </label>
+            <button type="submit" id="btnEdit">Edit</button>
+        </form>
+    </div>
     <div class="toDoContainer">
         <div class="toDoBox">
             <h2>To Do</h2>
@@ -42,7 +58,10 @@
             <ul class="list" id="done"></ul>
         </div>
         <div class="toDoBox">
-            <h2>Deleted</h2>
+            <header class="headerDeleted">
+                <h2>Deleted</h2>
+                <button class="btnClearAll">Clear all</button>
+            </header>
             <ul class="list" id="deleted"></ul>
         </div>
     </div>
