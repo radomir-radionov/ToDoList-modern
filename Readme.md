@@ -3,6 +3,7 @@
 1. Добавить кнопку **edit** в карточку, при клике на кнопку появляется модальное окно для редактирования **title** и **description** текущей карточки.  
    ![Alt text](./images/image-5.png)
    ![Alt text](./images/image-6.png)
+   ![Alt text](./images/image-7.png)
 2. Добавить кнопку **delete** в карточку, при клике на кнопку выбранная карточка переносится в колонку **Deleted**.
    ![Alt text](./images/image-1.png)
    ![Alt text](./images/image-2.png)
