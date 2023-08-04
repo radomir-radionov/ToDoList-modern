@@ -23,7 +23,3 @@
    ![image](https://github.com/radomir-radionov/ToDoList-modern/assets/66359081/e0adb6ca-c0ca-4d8b-b537-61f07aa89a53)
    ![image](https://github.com/radomir-radionov/ToDoList-modern/assets/66359081/caaae4a9-2b76-4f67-a4ce-9e49ff549845)
    ![image](https://github.com/radomir-radionov/ToDoList-modern/assets/66359081/5fd9441c-f6dd-4677-8d47-6eb308e6e46b)
-
-
-
-
