@@ -1,5 +1,10 @@
 # To Do List
 
+Stack:
+
+- HTML, CSS, JavaScript
+- Git
+
 Here you can find your tasks with my example:
 
 - [task 1](https://github.com/radomir-radionov/ToDoList-modern/tree/task1)
