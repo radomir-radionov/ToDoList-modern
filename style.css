@@ -75,7 +75,6 @@ input {
 .toDoContainer {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -91,4 +90,10 @@ input {
   min-height: 143px;
   padding: 10px;
   border: 1px solid black;
+}
+
+.card {
+  padding: 4px;
+  border: 1px solid red;
+  list-style-type: none;
 }
