@@ -5,6 +5,8 @@
 - HTML, CSS, JavaScript
 - Git
 
+### Tasks:
+
 Here you can find your tasks with my example:
 
 - [task 1](https://github.com/radomir-radionov/ToDoList-modern/tree/task1)
