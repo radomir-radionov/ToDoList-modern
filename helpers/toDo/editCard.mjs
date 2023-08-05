@@ -1,8 +1,6 @@
 import commonVariables from './commonVariables.mjs'
 import handleBtnEdit from '../modal/handleBtnEdit.mjs'
-import closeModalEdit from '../modal/closeModalEdit.mjs'
-
-// TODO: split logics into separate files
+import closeModal from '../modal/closeModal.mjs'
 
 const editCard = (eventTarget, data) => {
   const modal = document.querySelector('.modalEditTodoWrapper')
@@ -20,33 +18,25 @@ const editCard = (eventTarget, data) => {
   inputEditTitle.value = deletedCard.title
   inputEditDescription.value = deletedCard.description
 
-  btnEdit.addEventListener('click', (event) =>
-    handleBtnEdit(
-      event,
-      modal,
-      btnEdit,
-      listId,
-      deletedCard,
-      deletedCardIndex,
-      inputEditTitle,
-      inputEditDescription,
-      data
-    )
+  btnEdit.addEventListener(
+    'click',
+    (event) => {
+      console.log(1)
+      handleBtnEdit(
+        event,
+        data,
+        listId,
+        deletedCard,
+        deletedCardIndex,
+        inputEditTitle,
+        inputEditDescription,
+        modal
+      )
+    },
+    { once: true }
   )
 
-  btnClose.addEventListener('click', (event) => {
-    event.preventDefault()
-    closeModalEdit(
-      modal,
-      btnEdit,
-      listId,
-      deletedCardIndex,
-      inputEditTitle,
-      inputEditDescription,
-      deletedCard,
-      data
-    )
-  })
+  btnClose.addEventListener('click', (event) => closeModal(event, modal))
 }
 
 export default editCard

@@ -1,33 +1,23 @@
-import closeModalEdit from './closeModalEdit.mjs'
+import drawList from '../toDo/drawList.mjs'
 
 const handleBtnEdit = (
   event,
-  modal,
-  btnEdit,
+  data,
   listId,
   deletedCard,
   deletedCardIndex,
   inputEditTitle,
   inputEditDescription,
-  data
+  modal
 ) => {
   event.preventDefault()
   data[listId].splice(deletedCardIndex, 1, {
-    id: deletedCard.id,
     title: inputEditTitle.value,
     description: inputEditDescription.value,
+    id: deletedCard.id,
   })
 
-  closeModalEdit(
-    modal,
-    btnEdit,
-    listId,
-    deletedCardIndex,
-    inputEditTitle,
-    inputEditDescription,
-    deletedCard,
-    data
-  )
+  modal.style.display = 'none'
+  drawList(data, listId)
 }
-
 export default handleBtnEdit

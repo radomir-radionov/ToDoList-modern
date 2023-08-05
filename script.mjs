@@ -6,7 +6,7 @@ import restoreCard from './helpers/toDo/restoreCard.mjs'
 
 import openModalToDo from './helpers/modal/openModalToDo.mjs'
 import handleFormCreateToDo from './helpers/modal/handleFormCreateToDo.mjs'
-import handleBtnClose from './helpers/modal/handleBtnClose.mjs'
+import closeModal from './helpers/modal/closeModal.mjs'
 
 const init = () => {
   const modalTodoWrapperEl = document.querySelector('.modalTodoWrapper')
@@ -24,7 +24,7 @@ const init = () => {
 
   btnClose.addEventListener('click', (event) => {
     event.preventDefault()
-    handleBtnClose(event, modalTodoWrapperEl)
+    closeModal(event, modalTodoWrapperEl)
   })
 
   btnOpenModelEl.addEventListener('click', (event) => {

@@ -1,6 +1,5 @@
 const drawList = (data, listType) => {
   const list = document.querySelector(`#${listType}`)
-
   list.innerHTML = ''
   data[listType].forEach((card) => {
     list.innerHTML += `
