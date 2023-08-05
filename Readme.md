@@ -2,9 +2,9 @@
 
 1. Открыть модальное окно при клике на кнопку **Add To Do**
 2. Закрывать модальное окно при клике на крестик.
-3. При клике на кнопку submit в modalTodo пушить объект:
+3. При клике на кнопку submit в modalTodo пушить объект в массив todos:
 ```js
-   {id: randomNumber; title:"Your Title", description: "Your Description"} в массив todos
+   {id: randomNumber; title:"Your Title", description: "Your Description"}
 ```
 
 ### Доп задание:
