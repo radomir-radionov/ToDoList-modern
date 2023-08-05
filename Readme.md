@@ -2,7 +2,7 @@
 
 **Refactoring** is a practice in software development that involves making improvements to the codebase without changing its external behavior. The primary goal of refactoring is to enhance the code's internal structure, readability, maintainability, and performance, without altering its functionality.
 
-1. Создай папку **helpers** и в ней создай папку для каждой сущности например **toDo**, **modal** и т.д. В созданную папку помести файлы с фичами. Используй расширение **.mjs** и **import/export**.
+1. Создай папку **helpers** и в ней создай папку для каждой сущности например **toDo**, **modal** и т.д. В созданную папку помести файлы с фичами. Используй **module** и **import/export**.
 
 #### usefull links:
 

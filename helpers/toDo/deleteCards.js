@@ -1,4 +1,4 @@
-import drawList from './drawList.mjs'
+import drawList from './drawList.js'
 
 const deleteCards = (data) => {
   data.deleted = []

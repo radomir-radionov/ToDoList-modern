@@ -1,12 +1,12 @@
-import editCard from './helpers/toDo/editCard.mjs'
-import transferCard from './helpers/toDo/transferCard.mjs'
-import deleteCard from './helpers/toDo/deleteCard.mjs'
-import deleteCards from './helpers/toDo/deleteCards.mjs'
-import restoreCard from './helpers/toDo/restoreCard.mjs'
+import editCard from './helpers/toDo/editCard.js'
+import transferCard from './helpers/toDo/transferCard.js'
+import deleteCard from './helpers/toDo/deleteCard.js'
+import deleteCards from './helpers/toDo/deleteCards.js'
+import restoreCard from './helpers/toDo/restoreCard.js'
 
-import openModal from './helpers/modal/openModal.mjs'
-import handleFormCreateToDo from './helpers/modal/handleFormCreateToDo.mjs'
-import closeModal from './helpers/modal/closeModal.mjs'
+import openModal from './helpers/modal/openModal.js'
+import handleFormCreateToDo from './helpers/modal/handleFormCreateToDo.js'
+import closeModal from './helpers/modal/closeModal.js'
 
 const init = () => {
   const modalTodoWrapperEl = document.querySelector('.modalTodoWrapper')

@@ -1,6 +1,6 @@
-import commonVariables from './commonVariables.mjs'
-import handleBtnEdit from '../modal/handleBtnEdit.mjs'
-import closeModal from '../modal/closeModal.mjs'
+import commonVariables from './commonVariables.js'
+import handleBtnEdit from '../modal/handleBtnEdit.js'
+import closeModal from '../modal/closeModal.js'
 
 const editCard = (eventTarget, data) => {
   const modal = document.querySelector('.modalEditTodoWrapper')

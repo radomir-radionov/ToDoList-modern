@@ -1,4 +1,4 @@
-import drawList from '../toDo/drawList.mjs'
+import drawList from '../toDo/drawList.js'
 
 const handleBtnEdit = (
   event,

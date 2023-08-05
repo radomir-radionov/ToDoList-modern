@@ -1,5 +1,5 @@
-import drawList from './drawList.mjs'
-import commonVariables from './commonVariables.mjs'
+import drawList from './drawList.js'
+import commonVariables from './commonVariables.js'
 
 const transferCard = (eventTarget, data) => {
   const listId = commonVariables(eventTarget, data).listId

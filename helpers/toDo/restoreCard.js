@@ -1,5 +1,5 @@
-import drawList from './drawList.mjs'
-import commonVariables from './commonVariables.mjs'
+import drawList from './drawList.js'
+import commonVariables from './commonVariables.js'
 
 const restoreCard = (eventTarget, data) => {
   const { deletedCard, deletedCardIndex } = commonVariables(eventTarget, data)
