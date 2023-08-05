@@ -4,7 +4,7 @@ import deleteCard from './helpers/toDo/deleteCard.mjs'
 import deleteCards from './helpers/toDo/deleteCards.mjs'
 import restoreCard from './helpers/toDo/restoreCard.mjs'
 
-import openModalToDo from './helpers/modal/openModalToDo.mjs'
+import openModal from './helpers/modal/openModal.mjs'
 import handleFormCreateToDo from './helpers/modal/handleFormCreateToDo.mjs'
 import closeModal from './helpers/modal/closeModal.mjs'
 
@@ -27,7 +27,7 @@ const init = () => {
   )
 
   btnOpenModelEl.addEventListener('click', (event) => {
-    openModalToDo(event, modalTodoWrapperEl)
+    openModal(event, modalTodoWrapperEl)
   })
 
   formCreateTodoEl.addEventListener('submit', (event) =>
