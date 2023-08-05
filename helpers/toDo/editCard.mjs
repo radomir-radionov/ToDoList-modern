@@ -21,7 +21,6 @@ const editCard = (eventTarget, data) => {
   btnEdit.addEventListener(
     'click',
     (event) => {
-      console.log(1)
       handleBtnEdit(
         event,
         data,

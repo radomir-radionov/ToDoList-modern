@@ -22,10 +22,9 @@ const init = () => {
     deleted: [],
   }
 
-  btnClose.addEventListener('click', (event) => {
-    event.preventDefault()
+  btnClose.addEventListener('click', (event) =>
     closeModal(event, modalTodoWrapperEl)
-  })
+  )
 
   btnOpenModelEl.addEventListener('click', (event) => {
     openModalToDo(event, modalTodoWrapperEl)
