@@ -2,7 +2,6 @@ const createToDoFormEl = document.querySelector('#modalTodo')
 const inputTitleEl = document.querySelector('#inputTitle')
 const inputDescriptionEl = document.querySelector('#inputDescription')
 const modalTodoWrapperEl = document.querySelector('.modalTodoWrapper')
-const modalEditTodoWrapperEl = document.querySelector('.modalEditTodoWrapper')
 const btnClose = document.querySelector('#btnClose')
 
 const drawList = (data, listType) => {
