@@ -17,13 +17,7 @@ const drawList = (data, listType) => {
         <span>Description:</span>
         <p class='description'>${card.description}</p>
         <br />
-        ${
-          listType !== 'deleted'
-            ? `<button class='button editButton'>Edit</button>
-              <button class='button nextButton'>Next</button>
-              <button class='button deleteButton'>Delete</button>`
-            : `<button class='button restoreButton'>Restore</button>`
-        }
+        <button class='button nextButton'>Next</button>
       </li>
     `
   })
