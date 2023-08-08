@@ -16,23 +16,29 @@ const closeTodoModal = (event) => {
 
 btnClose.addEventListener('click', closeTodoModal)
 
-const handleCreateTodoForm = (event, data) => {
-  event.preventDefault()
-
-  const title = inputTitleEl.value
-  const description = inputDescriptionEl.value
-
-  data.toDo.push({ id: Math.random(), title, description })
-  createToDoFormEl.reset()
-  modalTodoWrapperEl.style.display = 'none'
-}
-
 const init = () => {
   const btnOpenModelEl = document.querySelector('#btnOpenModel')
 
   const todos = {
     toDo: [],
   }
+
+  const handleCreateTodoForm = (event, data) => {
+    event.preventDefault()
+
+    const title = inputTitleEl.value
+    const description = inputDescriptionEl.value
+
+    data.toDo.push({ id: Math.random(), title, description })
+    console.log(data)
+    createToDoFormEl.reset()
+    modalTodoWrapperEl.style.display = 'none'
+  }
+
+  createToDoFormEl.addEventListener('submit', (event) => {
+    event.preventDefault()
+    handleCreateTodoForm(event, todos)
+  })
 
   btnOpenModelEl.addEventListener('click', openToDoModal)
 }
