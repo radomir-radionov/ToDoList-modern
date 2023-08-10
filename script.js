@@ -3,11 +3,10 @@ const inputTitleEl = document.querySelector('#inputTitle')
 const inputDescriptionEl = document.querySelector('#inputDescription')
 const modalTodoWrapperEl = document.querySelector('.modalTodoWrapper')
 const btnClose = document.querySelector('#btnClose')
-const btnNext = document.querySelector('.nextButton')
 
 const drawList = (data, listType) => {
   const list = document.querySelector(`#${listType}`)
-  console.log('listType', listType)
+
   list.innerHTML = ''
   data[listType].forEach((card) => {
     list.innerHTML += `
