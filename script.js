@@ -7,7 +7,7 @@ const btnNext = document.querySelector('.nextButton')
 
 const drawList = (data, listType) => {
   const list = document.querySelector(`#${listType}`)
-
+  console.log('listType', listType)
   list.innerHTML = ''
   data[listType].forEach((card) => {
     list.innerHTML += `
@@ -44,7 +44,7 @@ const handleCreateToDoForm = (event, data) => {
   const description = inputDescriptionEl.value
 
   // Do something with the form data (e.g., send it to the server)
-  data.toDo.push({ id: Math.random(), title, description })
+  data.toDo.push({id: Math.random(), title, description})
   console.log(data.toDo)
   createToDoFormEl.reset()
   modalTodoWrapperEl.style.display = 'none'
@@ -56,11 +56,9 @@ const commonVariables = (eventTarget, data) => {
   const card = eventTarget.closest('.card')
   const cardId = +card.id
   const deletedCard = data[listId].filter((card) => card.id === cardId)[0]
-  const deletedCardIndex = data[listId].findIndex(
-    (card) => card.id === deletedCard.id
-  )
+  const deletedCardIndex = data[listId].findIndex((card) => card.id === deletedCard.id)
 
-  return { listId, deletedCard, deletedCardIndex }
+  return {listId, deletedCard, deletedCardIndex}
 }
 
 const tranferCardToAnotherList = (eventTarget, data) => {
@@ -90,9 +88,7 @@ const init = () => {
   }
 
   btnOpenModelEl.addEventListener('click', openToDoModal)
-  createToDoFormEl.addEventListener('submit', (event) =>
-    handleCreateToDoForm(event, todos)
-  )
+  createToDoFormEl.addEventListener('submit', (event) => handleCreateToDoForm(event, todos))
   todoContainerEl.addEventListener('click', (event) => {
     switch (true) {
       case [...event.target.classList].includes('nextButton'):
