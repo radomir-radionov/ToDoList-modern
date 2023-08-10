@@ -29,7 +29,7 @@ const init = () => {
     const title = inputTitleEl.value
     const description = inputDescriptionEl.value
 
-    data.toDo.push({ id: Math.random(), title, description })
+    data.toDo.push({id: Math.random(), title, description})
     console.log(data)
     createToDoFormEl.reset()
     modalTodoWrapperEl.style.display = 'none'
