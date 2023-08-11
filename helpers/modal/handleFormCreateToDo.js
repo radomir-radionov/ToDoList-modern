@@ -10,7 +10,8 @@ const handleFormCreateToDo = (event, data) => {
   const title = inputTitleEl.value
   const description = inputDescriptionEl.value
 
-  data.toDo.push({ id: Date.now(), title, description })
+  data.toDo.push({id: Date.now(), title, description})
+  localStorage.setItem('todos', JSON.stringify(data))
   formCreateTodoEl.reset()
   modalTodoWrapperEl.style.display = 'none'
   drawList(data, 'toDo')

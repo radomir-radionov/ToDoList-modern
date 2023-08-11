@@ -12,6 +12,8 @@ const transferCard = (eventTarget, data) => {
   data[listId].splice(deletedCardIndex, 1)
   data[listsId[nextListIndex]].push(deletedCard)
 
+  localStorage.setItem('todos', JSON.stringify(data))
+
   drawList(data, listId)
   drawList(data, listsId[nextListIndex])
 }

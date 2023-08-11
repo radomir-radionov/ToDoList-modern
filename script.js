@@ -7,6 +7,7 @@ import restoreCard from './helpers/toDo/restoreCard.js'
 import openModal from './helpers/modal/openModal.js'
 import handleFormCreateToDo from './helpers/modal/handleFormCreateToDo.js'
 import closeModal from './helpers/modal/closeModal.js'
+import drawList from './helpers/toDo/drawList.js'
 
 const init = () => {
   const modalTodoWrapperEl = document.querySelector('.modalTodoWrapper')
@@ -15,24 +16,25 @@ const init = () => {
   const todoContainerEl = document.querySelector('.toDoContainer')
   const btnOpenModelEl = document.querySelector('#btnOpenModal')
 
-  const todos = {
-    toDo: [],
-    inProgress: [],
-    done: [],
-    deleted: [],
-  }
+  const todos = localStorage.getItem('todos')
+    ? JSON.parse(localStorage.getItem('todos'))
+    : {
+        toDo: [],
+        inProgress: [],
+        done: [],
+        deleted: [],
+      }
 
-  btnClose.addEventListener('click', (event) =>
-    closeModal(event, modalTodoWrapperEl)
-  )
+  const keys = Object.keys(todos)
+  keys.forEach((key) => drawList(todos, key))
+
+  btnClose.addEventListener('click', (event) => closeModal(event, modalTodoWrapperEl))
 
   btnOpenModelEl.addEventListener('click', (event) => {
     openModal(event, modalTodoWrapperEl)
   })
 
-  formCreateTodoEl.addEventListener('submit', (event) =>
-    handleFormCreateToDo(event, todos)
-  )
+  formCreateTodoEl.addEventListener('submit', (event) => handleFormCreateToDo(event, todos))
 
   todoContainerEl.addEventListener('click', (event) => {
     const eventTarget = event.target
