@@ -25,8 +25,8 @@ const init = () => {
         deleted: [],
       }
 
-  const keys = Object.keys(todos)
-  keys.forEach((key) => drawList(todos, key))
+  const todosKeys = Object.keys(todos)
+  todosKeys.forEach((key) => drawList(todos, key))
 
   btnClose.addEventListener('click', (event) => closeModal(event, modalTodoWrapperEl))
 
