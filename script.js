@@ -34,19 +34,17 @@ const closeTodoModal = (event) => {
 btnClose.addEventListener('click', closeTodoModal)
 
 // write a function to add a todo item
-
 const handleCreateToDoForm = (event, data) => {
   event.preventDefault()
-
   // Get the values from the form
   const title = inputTitleEl.value
   const description = inputDescriptionEl.value
-
   // Do something with the form data (e.g., send it to the server)
   data.toDo.push({id: Math.random(), title, description})
   console.log(data.toDo)
   createToDoFormEl.reset()
   modalTodoWrapperEl.style.display = 'none'
+
   drawList(data, 'toDo')
 }
 
