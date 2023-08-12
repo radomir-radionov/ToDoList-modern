@@ -9,62 +9,64 @@
 </head>
 
 <body>
-    <button id="btnOpenModal">Add To Do</button>
-    <div class="modalTodoWrapper">
-        <form id="modalTodo">
-            <header>
-                <h2 class="modal-title">Add To Do</h2>
-                <button id="btnClose">&times;</button>
-            </header>
-            <label for="inputTitle">
-                Title:
-                <input type="text" id="inputTitle" placeholder="Enter title">
-            </label>
-            <label for="inputDescription">
-                Description:
-                <input type="text" id="inputDescription" placeholder="Enter description">
-            </label>
-            <button type="submit">submit</button>
-        </form>
-    </div>
-    <div class="modalEditTodoWrapper">
-        <form id="modalEditTodo">
-            <header>
-                <h2 class="modal-title">Edit To Do</h2>
-                <button id="btnClose">&times;</button>
-            </header>
-            <label for="inputTitle">
-                Title:
-                <input type="text" id="inputEditTitle" placeholder="Enter a new title">
-            </label>
-            <label for="inputDescription">
-                Description:
-                <input type="text" id="inputEditDescription" placeholder="Enter a new description">
-            </label>
-            <button type="submit" id="btnEdit">Edit</button>
-        </form>
-    </div>
-    <div class="toDoContainer">
-        <div class="toDoBox">
-            <h2>To Do</h2>
-            <ul class="list" id="toDo"></ul>
+    <main>
+        <button id="btnOpenModal">Add To Do</button>
+        <div class="modalTodoWrapper">
+            <form id="modalTodo">
+                <header>
+                    <h2 class="modal-title">Add To Do</h2>
+                    <button id="btnClose">&times;</button>
+                </header>
+                <label for="inputTitle">
+                    Title:
+                    <input type="text" id="inputTitle" placeholder="Enter title">
+                </label>
+                <label for="inputDescription">
+                    Description:
+                    <input type="text" id="inputDescription" placeholder="Enter description">
+                </label>
+                <button type="submit">submit</button>
+            </form>
         </div>
-        <div class="toDoBox">
-            <h2>In Progress</h2>
-            <ul class="list" id="inProgress"></ul>
+        <div class="modalEditTodoWrapper">
+            <form id="modalEditTodo">
+                <header>
+                    <h2 class="modal-title">Edit To Do</h2>
+                    <button id="btnClose">&times;</button>
+                </header>
+                <label for="inputTitle">
+                    Title:
+                    <input type="text" id="inputEditTitle" placeholder="Enter a new title">
+                </label>
+                <label for="inputDescription">
+                    Description:
+                    <input type="text" id="inputEditDescription" placeholder="Enter a new description">
+                </label>
+                <button type="submit" id="btnEdit">Edit</button>
+            </form>
         </div>
-        <div class="toDoBox">
-            <h2>Done</h2>
-            <ul class="list" id="done"></ul>
+        <div class="toDoContainer">
+            <div class="toDoBox">
+                <h2>To Do</h2>
+                <ul class="list" id="toDo"></ul>
+            </div>
+            <div class="toDoBox">
+                <h2>In Progress</h2>
+                <ul class="list" id="inProgress"></ul>
+            </div>
+            <div class="toDoBox">
+                <h2>Done</h2>
+                <ul class="list" id="done"></ul>
+            </div>
+            <div class="toDoBox">
+                <header class="headerDeleted">
+                    <h2>Deleted</h2>
+                    <button class="btnClearAll">Clear all</button>
+                </header>
+                <ul class="list" id="deleted"></ul>
+            </div>
         </div>
-        <div class="toDoBox">
-            <header class="headerDeleted">
-                <h2>Deleted</h2>
-                <button class="btnClearAll">Clear all</button>
-            </header>
-            <ul class="list" id="deleted"></ul>
-        </div>
-    </div>
+    </main>
     <script type="module" src="./script.js"></script>
 </body>
 

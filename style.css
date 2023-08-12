@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fenix&display=swap');
+
 body,
 h1,
 h2,
@@ -15,19 +17,36 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
+  min-height: 100vh;
   padding: 40px;
+  font-family: 'Fenix', serif;
+  color: white;
+  background: linear-gradient(135deg, #153677, #4e085f);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
 }
 
 input {
   padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
 }
 
-#openModelBtn {
-  width: fit-content;
+button {
+  cursor: pointer;
 }
 
 .modalTodoWrapper,
@@ -52,42 +71,34 @@ input {
   max-width: 360px;
   min-width: 280px;
   padding: 20px;
-  border: 1px solid black;
   border-radius: 6px;
-  background-color: rgb(252, 234, 176);
-}
+  background-color: rgb(255, 145, 0);
+  overscroll-behavior-y: contain;
 
-#modalTodo header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  & header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-#modalTodo label {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-#modalEditTodo header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#modalEditTodo label {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  & label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: 400;
+  }
 }
 
 #btnClose {
-  font-size: 28px;
-}
+  font-size: 34px;
+  border: none;
+  color: white;
+  background-color: transparent;
 
-#btnClose:hover {
-  color: red;
-  cursor: pointer;
+  &:hover {
+    color: red;
+    cursor: pointer;
+  }
 }
 
 .toDoContainer {
@@ -103,18 +114,20 @@ input {
 }
 
 .list {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-height: 143px;
+  min-height: 156px;
   padding: 10px;
-  border: 1px solid black;
+  border: 2px solid white;
 }
 
 .card {
   margin-bottom: 0.8rem;
   padding: 0.4rem;
-  border: 1px solid red;
+  border: 2px solid rgb(255, 170, 58);
+  border-radius: 8px;
 }
 
 .card:last-of-type {
@@ -124,4 +137,72 @@ input {
 .headerDeleted {
   display: flex;
   gap: 10px;
+}
+
+.btnEdit,
+.btnNext,
+.btnDelete,
+.btnRestore,
+.btnClearAll {
+  padding: 4px 10px;
+  border: none;
+  font-weight: 600;
+  color: white;
+  background-color: transparent;
+}
+
+.btnEdit {
+  border: 1px solid yellow;
+
+  &:hover {
+    transition: all 0.5s;
+    background-color: rgb(194, 194, 0);
+  }
+}
+
+.btnNext {
+  border: 1px solid rgb(0, 255, 242);
+
+  &:hover {
+    transition: all 0.5s;
+    background-color: rgb(0, 177, 168);
+  }
+}
+
+.btnDelete,
+.btnClearAll {
+  border: 1px solid red;
+
+  &:hover {
+    transition: all 0.5s;
+    background-color: rgb(170, 0, 0);
+  }
+}
+
+.btnRestore {
+  border: 1px solid rgb(0, 255, 13);
+
+  &:hover {
+    transition: all 0.5s;
+    background-color: rgb(0, 173, 9);
+  }
+}
+
+#btnOpenModal,
+button[type='submit'] {
+  max-width: fit-content;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(255, 145, 0);
+  border: 2px solid;
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: scale(1.2);
+    background-color: rgb(255, 170, 58);
+  }
 }

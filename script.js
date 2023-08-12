@@ -29,11 +29,7 @@ const init = () => {
   todosKeys.forEach((key) => drawList(todos, key))
 
   btnClose.addEventListener('click', (event) => closeModal(event, modalTodoWrapperEl))
-
-  btnOpenModelEl.addEventListener('click', (event) => {
-    openModal(event, modalTodoWrapperEl)
-  })
-
+  btnOpenModelEl.addEventListener('click', (event) => openModal(event, modalTodoWrapperEl))
   formCreateTodoEl.addEventListener('submit', (event) => handleFormCreateToDo(event, todos))
 
   todoContainerEl.addEventListener('click', (event) => {
