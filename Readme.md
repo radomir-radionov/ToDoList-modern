@@ -14,6 +14,7 @@ Here you can find your tasks with my example:
 - [task 3](https://github.com/radomir-radionov/ToDoList-modern/tree/task3)
 - [task 4](https://github.com/radomir-radionov/ToDoList-modern/tree/task4)
 - [task 5](https://github.com/radomir-radionov/ToDoList-modern/tree/task5)
+- [task 6](https://github.com/radomir-radionov/ToDoList-modern/tree/task6)
 
 ### Pay attention
 
