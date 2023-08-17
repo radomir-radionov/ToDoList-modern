@@ -53,7 +53,7 @@ const handleCreateToDoForm = (event, data) => {
   const description = inputDescriptionEl.value
 
   // Do something with the form data (e.g., send it to the server)
-  data.toDo.push({ id: Math.random(), title, description })
+  data.toDo.push({id: Math.random(), title, description})
   createToDoFormEl.reset()
   modalTodoWrapperEl.style.display = 'none'
   drawList(data, 'toDo')
@@ -64,11 +64,9 @@ const commonVariables = (eventTarget, data) => {
   const card = eventTarget.closest('.card')
   const cardId = +card.id
   const deletedCard = data[listId].filter((card) => card.id === cardId)[0]
-  const deletedCardIndex = data[listId].findIndex(
-    (card) => card.id === deletedCard.id
-  )
+  const deletedCardIndex = data[listId].findIndex((card) => card.id === deletedCard.id)
 
-  return { listId, deletedCard, deletedCardIndex }
+  return {listId, deletedCard, deletedCardIndex}
 }
 
 const editCard = (eventTarget, data) => {
@@ -78,10 +76,7 @@ const editCard = (eventTarget, data) => {
   const btnEdit = document.querySelector('#btnEdit')
   const btnClose = document.querySelector('#modalEditTodo #btnClose')
 
-  const { listId, deletedCard, deletedCardIndex } = commonVariables(
-    eventTarget,
-    data
-  )
+  const {listId, deletedCard, deletedCardIndex} = commonVariables(eventTarget, data)
 
   modal.style.display = 'flex'
   inputEditTitle.value = deletedCard.title
@@ -129,10 +124,7 @@ const tranferCardToAnotherList = (eventTarget, data) => {
 }
 
 const deleteCard = (eventTarget, data) => {
-  const { listId, deletedCard, deletedCardIndex } = commonVariables(
-    eventTarget,
-    data
-  )
+  const {listId, deletedCard, deletedCardIndex} = commonVariables(eventTarget, data)
 
   data[listId].splice(deletedCardIndex, 1)
   data.deleted.push(deletedCard)
@@ -147,7 +139,7 @@ const deleteAllFromDeletedList = (data) => {
 }
 
 const restoreCard = (eventTarget, data) => {
-  const { deletedCard, deletedCardIndex } = commonVariables(eventTarget, data)
+  const {deletedCard, deletedCardIndex} = commonVariables(eventTarget, data)
 
   data.deleted.splice(deletedCardIndex, 1)
   data.toDo.push(deletedCard)
@@ -168,9 +160,7 @@ const init = () => {
   }
 
   btnOpenModelEl.addEventListener('click', openToDoModal)
-  createToDoFormEl.addEventListener('submit', (event) =>
-    handleCreateToDoForm(event, todos)
-  )
+  createToDoFormEl.addEventListener('submit', (event) => handleCreateToDoForm(event, todos))
   todoContainerEl.addEventListener('click', (event) => {
     const eventTarget = event.target
 
