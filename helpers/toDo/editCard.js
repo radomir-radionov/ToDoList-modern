@@ -9,10 +9,7 @@ const editCard = (eventTarget, data) => {
   const btnEdit = document.querySelector('#btnEdit')
   const btnClose = document.querySelector('#modalEditTodo #btnClose')
 
-  const { listId, deletedCard, deletedCardIndex } = commonVariables(
-    eventTarget,
-    data
-  )
+  const {listId, deletedCard, deletedCardIndex} = commonVariables(eventTarget, data)
 
   modal.style.display = 'flex'
   inputEditTitle.value = deletedCard.title
@@ -21,18 +18,9 @@ const editCard = (eventTarget, data) => {
   btnEdit.addEventListener(
     'click',
     (event) => {
-      handleBtnEdit(
-        event,
-        data,
-        listId,
-        deletedCard,
-        deletedCardIndex,
-        inputEditTitle,
-        inputEditDescription,
-        modal
-      )
+      handleBtnEdit(event, data, listId, deletedCard, deletedCardIndex, inputEditTitle, inputEditDescription, modal)
     },
-    { once: true }
+    {once: true}
   )
 
   btnClose.addEventListener('click', (event) => closeModal(event, modal))

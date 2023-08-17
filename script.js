@@ -22,17 +22,13 @@ const init = () => {
     deleted: [],
   }
 
-  btnClose.addEventListener('click', (event) =>
-    closeModal(event, modalTodoWrapperEl)
-  )
+  btnClose.addEventListener('click', (event) => closeModal(event, modalTodoWrapperEl))
 
   btnOpenModelEl.addEventListener('click', (event) => {
     openModal(event, modalTodoWrapperEl)
   })
 
-  formCreateTodoEl.addEventListener('submit', (event) =>
-    handleFormCreateToDo(event, todos)
-  )
+  formCreateTodoEl.addEventListener('submit', (event) => handleFormCreateToDo(event, todos))
 
   todoContainerEl.addEventListener('click', (event) => {
     const eventTarget = event.target
