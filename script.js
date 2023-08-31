@@ -56,3 +56,43 @@ const init = () => {
 }
 
 init()
+
+const catsEl = document.querySelector('.cats')
+const btnGetCatEl = document.querySelector('#btnGetCat')
+
+btnGetCatEl.addEventListener('click', async () => {
+  await new Promise((resolve) => setTimeout(resolve, 2000))
+
+  const response = await fetch('https://api.thecatapi.com/v1/images/search')
+  const catData = await response.json()
+
+  catData.forEach((cat) => {
+    catsEl.innerHTML += `
+    <div class="cat">
+      <img src="${cat.url}" alt="${cat.title}">
+    </div>
+  `
+  })
+})
+
+const polyEl = document.querySelector('.svg-attributes-demo polygon')
+const feTurbulenceEl = document.querySelector('feTurbulence')
+const feDisplacementMap = document.querySelector('feDisplacementMap')
+
+polyEl.setAttribute('points', '64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100')
+feTurbulenceEl.setAttribute('baseFrequency', '.05')
+feDisplacementMap.setAttribute('scale', '15')
+
+anime({
+  targets: ['.svg-attributes-demo polygon', 'feTurbulence', 'feDisplacementMap'],
+  points: '64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96',
+  baseFrequency: 0,
+  scale: 1,
+  loop: true,
+  direction: 'alternate',
+  easing: 'easeInOutExpo',
+})
+
+const arr2 = [0, 1, [2, [3, [4, 5]]]]
+
+console.log(arr2.flat())

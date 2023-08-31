@@ -33,6 +33,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  max-width: 1280px;
   padding: 20px;
   border: 2px solid white;
   border-radius: 10px;
@@ -189,6 +190,7 @@ button {
 }
 
 #btnOpenModal,
+#btnGetCat,
 button[type='submit'] {
   max-width: fit-content;
   padding: 8px 16px;
@@ -205,4 +207,27 @@ button[type='submit'] {
     transform: scale(1.2);
     background-color: rgb(255, 170, 58);
   }
+}
+
+.cats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cat img {
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+}
+
+.demo-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 290px;
+  height: 100%;
 }
